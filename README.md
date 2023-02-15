@@ -1,13 +1,13 @@
 # heart_valve_maker
 
-This code produces the x,y,z coordinates of a model heartvalve. The entire valve is constructed as a single path of helical construction. Run heart_valve_designer_App.mlapp or heart_valve_designer_AppScipt.m as a master script in MATLAB. This script calls three additional functions (valve_leaf_maker.m, cylinder_shell_maker.m, and sine_shell_maker.m).
+This code produces the x,y,z coordinates of a model heart valve. The entire valve is made from a single path of helical construction. Run heart_valve_designer_App.mlapp or heart_valve_designer_AppScipt.m as a master script in MATLAB. This script calls three additional functions (valve_leaf_maker.m, cylinder_shell_maker.m, and sine_shell_maker.m).
 
 Each part is drawn as a helical path of contstant arc-length between steps (either 0.1 or 0.05 mm). Different shapes are constructed separately and joined together by starting each successive part at the end point of the preceding part.
 
 The base radius of the sinus, the total valve height, the leaflet height and the coupling radius can be tuned to produce the desired model geometery.
 
 # heart valve parameters:
-  Pitch - the layer height of the helical print path
+  Pitch - the layer spacing between adjacent features
 
   No. of leaves - choose from 2 to 7 for number of leaves to be designed in the valve
 
@@ -28,9 +28,9 @@ The base radius of the sinus, the total valve height, the leaflet height and the
 
 3. Change the different part dimensions
 
-4. Click "export print trajectory" to download the csv file
+4. Click "export print trajectory" to create a csv file
 
 
 The trajectory file contains the x,y,z coordinates of the model heartvalve with the selected dimensions.
 
-To make a gcode file, convert the trajectory into a solid part using MeshLab and use a slicer software to export it as a gcode file.
+To print the path, convert to gcode.
